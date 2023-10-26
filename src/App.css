@@ -1,33 +1,113 @@
 .App {
   text-align: center;
 }
-.main{
+
+.main {
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  padding: 0px;
+}
+
+/* .main{
   margin: auto;
   width: 50%;
   height: fit-content;
   border: none;
   padding: 0px;  
   text-align: center;
+} */
+
+.results {
+  margin: 5%;
+  width: 50%;
+  text-align: center;
+  padding: 0px;
 }
-.results{
+
+/* .results{
   margin: 5%;
   width: 50%;
   height: fit-content;
   border: none;
   padding: 0px;  
   text-align: center;
+} */
+
+.text-area-wrapper {
+  margin: 10px auto;
+  width: 100%;
+  text-align: left;
 }
 
-.main label, button{
+label, button {
   float: left;
   padding-block: 10px;
 }
-textarea{
+
+/* .main label, button{
+  float: left;
+  padding-block: 10px;
+} */
+
+textarea {
+  width: 100%;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 10px;
+  text-align: left;
+}
+/* textarea{
   margin: normal;
   width: 96%;
   border: 3px solid rgb(0, 0, 0);
   padding: 10px;  
   text-align: left;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+} */
+
+
+.text-with-underlines .error-word {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.underlines .underline {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.suggestion-dropdown {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 999;
+}
+
+.suggestion-dropdown ul {
+  list-style: none;
+  padding: 0;
+}
+
+.suggestion-dropdown ul li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.results select {
+  margin-left: 10px;
+}
+.error-word {
+  color: red; /* Change the color to your desired highlight color */
+  cursor: pointer;
+  text-decoration: underline;
+}
+.correct{
+  color: rgb(3, 153, 15);
 }
 
 .App-logo {

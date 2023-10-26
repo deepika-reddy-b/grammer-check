@@ -1,0 +1,68 @@
+.App {
+    text-align: center;
+  }
+  
+  .main {
+    margin: auto;
+    width: 50%;
+    height: fit-content;
+    border: none;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .results {
+    margin: 5%;
+    width: 50%;
+    height: fit-content;
+    border: none;
+    padding: 0px;
+    text-align: center;
+  }
+  
+  .main label,
+  button {
+    float: left;
+    padding-block: 10px;
+  }
+  
+  textarea {
+    margin: normal;
+    width: 96%;
+    border: 3px solid rgb(0, 0, 0);
+    padding: 10px;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+  }
+  
+  .text-with-underlines .underline {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .suggestion-dropdown {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 999;
+  }
+  
+  .suggestion-dropdown ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .suggestion-dropdown ul li {
+    padding: 5px;
+    cursor: pointer;
+  }
+  
+  .results select {
+    margin-left: 10px;
+  }
+  
+  .underline.wrong-word {
+    color: red; /* Change the color for wrong words */
+  }
+  
