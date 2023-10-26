@@ -16,7 +16,7 @@ const App = () => {
           'Content-Type': 'application/json',
           'X-RapidAPI-Key': '920Bs9w6Qqk1nUBYfQvdfmhg2Ji98gRA', 
         body: JSON.stringify({ text: text }),
-      });
+      }}) ;
 
       if (response.ok) {
         const data = await response.json();
@@ -49,9 +49,9 @@ const App = () => {
       <div className="results">
         <h2>Spell Check Result:</h2>
         <ul>
-          {spellCheckResult.map((correction, index) => (
-            <li key={index}>{correction.best_candidate}</li>
-          ),}
+          { spellCheckResult.map((correction, index) => (
+            <li key={index}>{correction.best_candidate}</li> ))
+          }
         </ul>
       </div>
     </div>
