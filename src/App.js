@@ -77,7 +77,7 @@ const App = () => {
             onChange={handleTextChange}
           />
           <label>The written text:</label> <br></br> <br></br>
-          {text.split(/\s+/).map((word, index) => {
+          {text.split(/\s+/).map( (word, index) => {
             const error = checkResult.find(
               (correction) => correction.offset <= index && index < correction.offset + correction.length
             );
@@ -94,20 +94,18 @@ const App = () => {
             } else {
               return <span key={index}>{word} </span>;
             }
-          })}
+            } )
+          }
         </div>
 
         {suggestionDropdownVisible && (
           <div className="suggestion-dropdown">
             <ul>
-              {suggestions.map((suggestion, j) => (
-                <li
-                  key={j}
-                  onClick={() => applySuggestion(suggestion)}
-                >
+              {suggestions.map( (suggestion, j) => (
+                <li key={j} onClick={() => applySuggestion(suggestion)} >
                   {suggestion}
-                </li>
-              ))}
+                </li> )  )
+              }
             </ul>
           </div>
         )}
@@ -118,34 +116,33 @@ const App = () => {
       <div className="results">
         <h2>Grammar Check Result:</h2>
         {checkResult.length === 0 ? (
-  <p className='correct'>The given text is good with grammar.</p>
-) : (
-  <div className="results">
-    <h2>Grammar Check Result:</h2>
-    <ul>
-      {checkResult.map((correction, i) => (
-        <li key={i}>
-          <span
-            className="error-word"
-            onClick={() => handleSuggestionClick(correction)}
-          >
-            {text.substring(correction.offset, correction.offset + correction.length)}
-          </span>
-          {suggestionDropdownVisible && (
-            <select>
-              {correction.better.map((suggestion, j) => (
-                <option key={j} value={suggestion}>
-                  {suggestion}
-                </option>
+          <p className='correct'>The given text is good with grammar.</p>
+        ) : (
+          <div className="results">
+            <h2>Grammar Check Result:</h2>
+            <ul>
+              {checkResult.map((correction, i) => (
+                <li key={i}>
+                  <span
+                    className="error-word"
+                    onClick={() => handleSuggestionClick(correction)}
+                  >
+                    {text.substring(correction.offset, correction.offset + correction.length)}
+                  </span>
+                  {suggestionDropdownVisible && (
+                    <select>
+                      {correction.better.map((suggestion, j) => (
+                        <option key={j} value={suggestion}>
+                          {suggestion}
+                        </option>
+                      ))}
+                    </select>
+                  )}
+                </li>
               ))}
-            </select>
-          )}
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
-
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
